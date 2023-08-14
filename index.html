@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              
+            </div>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+          </div>
+        </nav>
+        <main>
+            <div class="col">
+            <div class="input-group mb-3">
+                <input type="file" class="form-control" id="inputGroupFile02">
+                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="txttitulo" placeholder="Título" aria-label="Recipient's username" aria-describedby="button-addon2">
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" id="txtdesc" placeholder="Descrição" aria-label="Recipient's username" aria-describedby="button-addon2">
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" id="txtpreco" placeholder="Preço" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="cadastrar()">Cadastrar</button>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" id="fotao" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" id="card-title">Card title</h5>
+                  <p class="card-text" id="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                 <p class="preco" id="preco">Preço</p>
+                </div>
+              </div>
+        </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script>
+
+        let array = []
+
+        function cadastrar(){
+
+            let foto = document.querySelector("#inputGroupFile02").src
+            let title = document.querySelector("#txttitulo").value
+            let desc = document.querySelector("#txtdesc").value
+            let prec = document.querySelector("#txtpreco").value
+
+            
+            let blabla = document.getElementById("inputGroupFile02").textContent = foto;
+            let lala =  document.getElementById("card-title").textContent = title;
+            let uiui = document.getElementById("card-text").textContent = desc;
+            let ata = document.getElementById("preco").textContent = prec;
+            let newsrc = `C:/Users/Aluno/Documents/lojaVirtual/images/${foto}`
+            document.querySelector("#fotao").setAttribute("src",newsrc)
+            for(let i = 0; i < array.length; i++){
+
+                array.push(title)
+        
+             
+        }
+            
+
+        }
+    </script>
+</body>
+</html>
